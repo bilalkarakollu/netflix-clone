@@ -1,0 +1,108 @@
+html,body{
+    background-color: #141414!important;
+    color: white!important;
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 100%;
+    margin-bottom: 200px;
+}
+
+.active{
+    font-weight: 700!important;
+}
+
+.active *{
+    font-weight: 700!important;
+}
+
+.scrollable-content {
+    position: relative;
+}
+.scrollable-content .next,
+.scrollable-content .prev {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    z-index: 1;
+    opacity: 0;
+    transition: 400ms all;
+    pointer-events: none;
+    cursor: pointer;
+    color: var(--icon, #000);
+}
+.scrollable-content.left .prev,
+.scrollable-content.right .next {
+    opacity: 1;
+    pointer-events: auto;
+}
+.scrollable-content .prev {
+    left: 0;
+    z-index: 20;
+}
+.scrollable-content .next {
+    right: 0;
+    z-index: 20;
+}
+.scrollable-content::before,
+.scrollable-content::after {
+    content: '';
+    width: var(--width, 60px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 400ms all;
+    pointer-events: none;
+}
+.scrollable-content::before {
+    left: 0;
+    background: #0F171E;
+    z-index: 10;
+}
+.scrollable-content::after {
+    right: 0;
+    background: #0F171E;
+    z-index: 10;
+}
+.scrollable-content.left::before {
+    opacity: 0.7;
+}
+.scrollable-content.right::after {
+    opacity: 0.7;
+}
+
+.news-container {
+    --icon: white;
+    --shadow: #000;
+    --width: 55px;
+    width: 100%;
+}
+.news-content {
+    width: 100%;
+    display: flex;
+    gap: 0 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.main{
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+@media (max-width: 600px) {
+    .box-content,
+    .news-content {
+        overflow-x: auto;
+    }
+}
