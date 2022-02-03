@@ -54,10 +54,10 @@ export default function Index({ title, request, comp }) {
                                 {!loading && textCute(banner.overview, 260)}
                             </Text>
                             <Flex mt={5}>
-                                <Button py={[1, 1, 2, 2]} mr={3} px={[5, 5, 10, 10]} size={['md', 'md', '4xl', '4xl']} color={'black'} fontSize={['15px', '15px', '25px', '25px']} colorScheme='gray'>
+                                <Button py={[2, 2, 3, 3]} mr={3} px={[5, 5, 10, 10]} size={['md', 'md', '4xl', '4xl']} color={'black'} fontSize={['15px', '15px', '25px', '25px']} colorScheme='gray'>
                                     <Icon as={IoPlaySharp} size={[35, 35, 40, 40]} style={{ marginRight: 10 }} /> Play
                                 </Button>
-                                <Button py={[1, 1, 2, 2]} mr={3} px={[5, 5, 10, 10]} size={['md', 'md', '4xl', '4xl']} fontSize={['15px', '15px', '25px', '25px']} colorScheme='blackAlpha'>
+                                <Button py={[2, 2, 3, 3]} mr={3} px={[5, 5, 10, 10]} size={['md', 'md', '4xl', '4xl']} fontSize={['15px', '15px', '25px', '25px']} colorScheme='blackAlpha'>
                                     <Icon as={IoAlertCircleOutline} size={[35, 35, 40, 40]} style={{ marginRight: 10 }} /> More Info
                                 </Button>
                             </Flex>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Flex, Button, Box, Image } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 import { IoSearchSharp, IoNotifications } from 'react-icons/io5'
+import DrawerMenu from './drawer'
+import Links from './links';
 
 export default function Index() {
 
@@ -29,6 +31,7 @@ export default function Index() {
                 <Flex align={'center'} width={'100%'} justifyContent={'space-between'} py={[3, 3, 1, 1]} px={[2, 2, 10, 12]}>
                     <Flex alignItems={'center'} >
                         <Flex alignItems={'center'}>
+                            <DrawerMenu />
                             <NavLink to={'/'}>
                                 <Box mx={3}>
                                     <Image src='/img/netflix-logo.png' alt='netflix-clone' width={93} />
@@ -36,31 +39,7 @@ export default function Index() {
                             </NavLink>
                         </Flex>
                         <Flex alignItems={'center'} display={['none', 'none', 'flex', 'flex']}>
-                            <NavLink to="/">
-                                <Button color={'white'} fontWeight={400} variant="link" aria-label="Home" mx={3} my={5} w="100%">
-                                    Home
-                                </Button>
-                            </NavLink>
-                            <NavLink to="/tvshows">
-                                <Button color={'white'} fontWeight={400} variant="link" aria-label="TvShows" mx={3} my={5} w="100%">
-                                    Tv Shows
-                                </Button>
-                            </NavLink>
-                            <NavLink to="/movies">
-                                <Button color={'white'} fontWeight={400} variant="link" aria-label="Movies" mx={3} my={5} w="100%">
-                                    Movies
-                                </Button>
-                            </NavLink>
-                            <NavLink to="/latest">
-                                <Button color={'white'} fontWeight={400} variant="link" aria-label="Movies" mx={3} my={5} w="100%">
-                                    New and Popular
-                                </Button>
-                            </NavLink>
-                            <NavLink to="/my-list">
-                                <Button color={'white'} fontWeight={400} variant="link" aria-label="Movies" mx={3} my={5} w="100%">
-                                    My List
-                                </Button>
-                            </NavLink>
+                            <Links />
                         </Flex>
                     </Flex>
                     <Flex alignItems={'center'}>
