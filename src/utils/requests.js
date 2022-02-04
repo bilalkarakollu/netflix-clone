@@ -7,4 +7,5 @@ export const requests = {
     fetchTrendingTV: `${baseURL}/trending/tv/week?api_key=${API_KEY}`,
     fetchTopRatedMovie: `${baseURL}/movie/top_rated?api_key=${API_KEY}`,
     fetchTopRatedTV: `${baseURL}/tv/top_rated?api_key=${API_KEY}`,
+    fetchMovie: `${baseURL}/movie/top_rated?api_key=${API_KEY}`,
 };
