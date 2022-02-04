@@ -65,7 +65,6 @@ export default function Index({ title, request, comp }) {
                     </Flex>
                 </Flex>
             </Flex>
-            <input type="text" onKeyDown={(e) => alert(e.keyCode)} />
         </>
     );
 }
